@@ -1,9 +1,3 @@
-# How to: Midjourney
-
-**Download as PDF here:**
-
-[https://drive.google.com/file/d/1JiNC94kvdxhW9E7NxZQnFzx_Tw9X2oei/view?usp=sharing](https://drive.google.com/file/d/1JiNC94kvdxhW9E7NxZQnFzx_Tw9X2oei/view?usp=sharing)
-
 # **Join the Midjourney Discord Server**
 
 You'll need a Discord account to use Midjourney. Once you're logged in, join the Midjourney server, or invite the bot to your private server. 
@@ -18,7 +12,7 @@ this is the full command list:
 
 [Midjourney Command List](https://docs.midjourney.com/docs/command-list)
 
-Noteworthy commands:
+**Noteworthy commands:**
 
 1. Use the **`/info`** command to see information about your current queued and running jobs, subscription type, renewal date, and more.
 2. **`/subscribe`** - Generate a personal link for a user's account page. 
@@ -36,7 +30,7 @@ all about subscriptions: [https://docs.midjourney.com/docs/plans](https://docs.m
     - /describe returns the aspect ratio for uploaded images.
 7. Activate Remix mode with the **`/prefer remix`** command to change prompts, parameters, model versions, or aspect ratios between variations.
 8. Use the **`/ask`** command to get answers to many common **support** questions.
-9. **`/shorten`-** lets you 'analyze' a prompt and get suggestions on what words might not be doing anything and which ones might be key. **this is an experimental feature and might not give the expected results.**
+9. **`/shorten`** lets you 'analyze' a prompt and get suggestions on what words might not be doing anything and which ones might be key. **this is an experimental feature and might not give the expected results.**
 
 # **Create a Prompt**
 
@@ -76,6 +70,22 @@ If the **image is on your computer or phone**, you can send it as a message to t
 - The `/blend` command is a simplified image prompting process optimized for mobile users.
 - Image prompts are **visible** on the Midjourney website unless a user has **Stealth Mode**.
 
+### Image Weights (--iw)
+In --v 5 you can increase the influence of your reference image using --iw N where N is a value between 0 and 2. 
+The default is 1.0 so if you want your image reference to be less influential, try --iw 0.5  and if you want it to be very influential try --iw 2.  (The iw stands for image weight.)
+
+Reference image recommendations:
+- Play  with --iw N. All images will have the weight value of N. You can't give images different values.
+- Play with the value of --stylize (--s) between 0 and 1000 to turn down (or up) the influence of Midjourney's house style.
+- The URL of your reference image(s) MUST end in an image filename extension such as png, jpg, gif.
+- Strive to use the same aspect ratios for input  and output: 1:1 in for 1:1 out. 2:3 in for 2:3 out, etc.
+- Reference images should be simple. Clear subjects, uncomplicated backgrounds.
+- You can't use URLs in place of words in the prompt. Click here for more information: https://discord.com/channels/662267976984297473/1026944423692619878/1058176989900582912
+- Image refs work best if they already represent roughly what you want to see in the final image.
+- MJ will always create a brand new image, never a copy. You can't recreate the source image. You'll only get rough likenesses of the people in the pictures.
+- Midjourney will NOT invent/add/create by itself. You must prompt for it. A reference image that does not include arms will continue to not have arms, unless your prompt mentions arms, i.e. sleeves, biceps, or bracelets.
+- You can add/remove image references using remix. This creates some cool opportunities. Try it out.
+
 ## **Use parameters**
 
 Customize your image generation using various parameters. 
@@ -112,50 +122,19 @@ Customize your image generation using various parameters.
     
     comparison of **stylize** parameter for the prompt **`a woman with a mental illness, illustration -v 5.2 --chaos 25`:**
     
-    ![stylize = 15](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_4da0d3b5-c800-4a1d-83a8-5fe2d96f2a3c_c25_s15.png)
+    ||||||
+    | --- | --- | -- | -- | -- |
+    | ![stylize = 15](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_4da0d3b5-c800-4a1d-83a8-5fe2d96f2a3c_c25_s15.png)  `stylize = 15` |  ![stylize = 100](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_4f17e4ca-2c5f-49df-a554-6fb5c054ba8d_c25_s100.png) `stylize = 100` | ![stylize = 200](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_095ed995-7804-44e2-963f-dff9d065850d_c25_s200.png) `stylize = 200` | ![stylize = 500](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_87dd2b2c-e2bb-493d-a981-d830de7dcfba_c25_s500.png) `stylize = 500` | ![stylize = 1000](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_4fb315f1-e75a-413a-bb33-d87f67d35bdc_c25_s1000.png)  `stylize = 1000` | 
     
-    stylize = 15
-    
-    ![stylize = 100](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_4f17e4ca-2c5f-49df-a554-6fb5c054ba8d_c25_s100.png)
-    
-    stylize = 100
-    
-    ![stylize = 200](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_095ed995-7804-44e2-963f-dff9d065850d_c25_s200.png)
-    
-    stylize = 200
-    
-    ![stylize = 500](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_87dd2b2c-e2bb-493d-a981-d830de7dcfba_c25_s500.png)
-    
-    stylize = 500
-    
-    ![stylize = 1000](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_4fb315f1-e75a-413a-bb33-d87f67d35bdc_c25_s1000.png)
-    
-    stylize = 1000
-    
-    - If you used --stylize in V4/V5.0/V5.1 you may need to re-adjust your numbers for V**5.2**, Try reducing it by much as **5x**. Meaning `--stylize 1000` V5/V5.1 should be a `--stylize 200` prompt for V5.2
+    - If you used `--stylize` in V4/V5.0/V5.1 you may need to re-adjust your numbers for V**5.2**, Try reducing it by much as **5x**. Meaning `--stylize 1000` V5/V5.1 should be a `--stylize 200` prompt for V5.2
 4. **`--chaos`**: This parameter introduces randomness into the image generation process. It accepts values from 0 to 1000, with 0 being no chaos and 1000 being maximum chaos. For example, **`/imagine a serene beach at sunset --chaos 500`** will generate an image of a beach at sunset with moderate randomness. **a higher chaos value means high variance; with a low value, the results will be closer to the most popular depictions of the prompt.**
     
-    comparison of **chaos** parameter for the prompt `**a woman with a mental illness, illustration --v 5.2 --stylize 200`:**
+    comparison of **chaos** parameter for the prompt **`a woman with a mental illness, illustration --v 5.2 --stylize 200`**:
     
-    ![chaos = 10](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_248042d5-ea26-4bde-a1ec-186d00ff1f75_c10_s200.png)
     
-    chaos = 10
-    
-    ![chaos = 25](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_1c03b0d7-563b-46a8-a365-ff16dc63649e_c25_s200.png)
-    
-    chaos = 25
-    
-    ![chaos = 50](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_a9705dab-bbbb-4159-aa33-e4b95ec224bd_c50_s200.png)
-    
-    chaos = 50
-    
-    ![chaos = 75](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_f9cf0046-63fd-48ea-a9cd-ddee4a0358fb_c75_s200.png)
-    
-    chaos = 75
-    
-    ![chaos = 100](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_fdc4bb28-0b9a-44e4-97de-3e548356d918_c100_s200.png)
-    
-    chaos = 100
+    ||||||
+    | --- | --- | -- | -- | -- |
+    | ![chaos = 10](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_248042d5-ea26-4bde-a1ec-186d00ff1f75_c10_s200.png)   `chaos = 10` |   ![chaos = 25](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_1c03b0d7-563b-46a8-a365-ff16dc63649e_c25_s200.png) `chaos = 25` | ![chaos = 50](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_a9705dab-bbbb-4159-aa33-e4b95ec224bd_c50_s200.png) `chaos = 50` |   ![chaos = 75](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_f9cf0046-63fd-48ea-a9cd-ddee4a0358fb_c75_s200.png) `chaos = 75` | ![chaos = 100](How%20to%20Midjourney/grumpykitten9741_a_woman_with_a_mental_illness_illustration_fdc4bb28-0b9a-44e4-97de-3e548356d918_c100_s200.png) `chaos = 100` |
     
 5. **`--tile`**: This parameter generates images that can be used as repeating tiles to create seamless patterns. For example, **`/imagine a pattern of leaves --tile`** will generate a tile of a leaf pattern that can be repeated seamlessly.
 6. **`--repeat`**: This parameter runs a job multiple times. It accepts values from 2 to 10/40 (Standard/Pro subscriptions only). For example, **`/imagine a serene beach at sunset --repeat 5`** will generate 5 different images of a serene beach at sunset.
@@ -171,22 +150,10 @@ Customize your image generation using various parameters.
     - --stop accepts values: 10–100.
     - The default --stop value is 100.
     - --stop does not work while Upscaling.
-    
-    ![`stop = 10`](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_at_sunset_41f89c7c-a8a6-4c5c-a90a-387a1d00ffac.png)
-    
-    `stop = 10`
-    
-    ![`stop = 50`](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_at_sunset_35f225b5-71d4-4a8e-904e-5c95eadc56b2.png)
-    
-    `stop = 50`
-    
-    ![`stop = 75`](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_at_sunset_2111c897-a7dc-40f0-a0a5-c6ce22ce677b.png)
-    
-    `stop = 75`
-    
-    ![`stop = 100`](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_at_sunset_4005d30c-29ed-4218-9a9d-0bfb51efeb6d.png)
-    
-    `stop = 100`
+
+    |||||
+    | --- | --- |--|--|
+    | ![`stop = 10`](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_at_sunset_41f89c7c-a8a6-4c5c-a90a-387a1d00ffac.png) `stop = 10`|   ![`stop = 50`](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_at_sunset_35f225b5-71d4-4a8e-904e-5c95eadc56b2.png)`stop = 50` |  ![`stop = 75`](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_at_sunset_2111c897-a7dc-40f0-a0a5-c6ce22ce677b.png)`stop = 75` |   ![`stop = 100`](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_at_sunset_4005d30c-29ed-4218-9a9d-0bfb51efeb6d.png)`stop = 100`
     
 10. ****`--style`****: fine-tunes the aesthetic of some [Midjourney Model Versions](https://docs.midjourney.com/models). Adding a style parameter can help you create more photo-realistic images, cinematic scenes, or cuter characters. 
     
@@ -196,33 +163,15 @@ Customize your image generation using various parameters.
     
     Model Version **Niji 5** accepts
     
-    - `--style **cute`**
-    - `--style **scenic`**
-    - `--style **original`**
-    - `--style **expressive`**
+    - `--style cute`
+    - `--style scenic`
+    - `--style original`
+    - `--style expressive`
     
     Comparison of styles for the prompt “**a serene beach in sunset”:**
-    
-    ![**--v 5.2 --style raw**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_136965b1-17cd-431b-ac52-bbce6b821c2b_v52_raw.png)
-    
-    **--v 5.2 --style raw**
-    
-    ![**--niji 5 --style original**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_7ed8db69-827e-45c5-a834-b76904902419_niji5_original.png)
-    
-    **--niji 5 --style original**
-    
-    ![**--niji 5 --style scenic**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_ce0007c9-d1c8-45db-8d9e-2ede99ac968a_niji5_scenic.png)
-    
-    **--niji 5 --style scenic**
-    
-    ![**--niji 5 --style expressive**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_be861ec1-80c8-4b6c-9053-567236347c43_niji5_expressive.png)
-    
-    **--niji 5 --style expressive**
-    
-    ![**--niji 5 --style cute**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_b71c19cc-fbe3-427a-b0d3-ba9028a571f3_niji5_cute.png)
-    
-    **--niji 5 --style cute**
-    
+    ||||||
+    | --- | --- | --- |--|--|
+    |    ![**--v 5.2 --style raw**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_136965b1-17cd-431b-ac52-bbce6b821c2b_v52_raw.png) **--v 5.2 --style raw** | ![**--niji 5 --style original**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_7ed8db69-827e-45c5-a834-b76904902419_niji5_original.png) **--niji 5 --style original**  |  ![**--niji 5 --style scenic**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_ce0007c9-d1c8-45db-8d9e-2ede99ac968a_niji5_scenic.png) **--niji 5 --style scenic**    |    ![**--niji 5 --style expressive**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_be861ec1-80c8-4b6c-9053-567236347c43_niji5_expressive.png)   **--niji 5 --style expressive**   |  ![**--niji 5 --style cute**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_b71c19cc-fbe3-427a-b0d3-ba9028a571f3_niji5_cute.png) **--niji 5 --style cute**   |
 11. **Experimental `--weird` command**
     - This command makes your images look more weird/edgy
     - Do not consider this a stable feature, what's weird may change over time
@@ -249,7 +198,7 @@ You can use Permutation Prompts to create combinations and permutations involvin
 
 **Prompt Example:**
 
-**`/imagine prompt`** `**a {red, green, yellow} bird`** creates and processes three Jobs:
+**`/imagine prompt`** **`a {red, green, yellow} bird`** creates and processes three Jobs:
 
 `/imagine prompt` `a red bird`
 
@@ -286,13 +235,9 @@ You can use Permutation Prompts to create combinations and permutations involvin
 
 </aside>
 
-![**a serene beach in sunset --v 1**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_ed0a2c0d-9915-4cac-ba69-73c04730e964_v1.png)
-
-**a serene beach in sunset --v 1**
-
-![Upscaled option 1](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_5dbb8e19-a8f1-4838-a290-771563a5fc16_v1_up.png)
-
-Upscaled option 1
+|||
+|--|--|
+| ![**a serene beach in sunset --v 1**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_ed0a2c0d-9915-4cac-ba69-73c04730e964_v1.png)**a serene beach in sunset --v 1** | ![Upscaled option 1](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_5dbb8e19-a8f1-4838-a290-771563a5fc16_v1_up.png) Upscaled option 1 |
 
 ## **Remaster**
 
@@ -309,13 +254,9 @@ The Zoom Out option allows you to extend the canvas of an upscaled image beyond 
 
 </aside>
 
-![Original, ar 1:1](How%20to%20Midjourney/grumpykitten9741_a_simple_floral_arrangement_in_spring_colors_o_7b70e8ef-69b9-4136-b1b9-97cfedb3e3a6.png)
-
-Original, ar 1:1
-
-![zoom out x2 ar 9:16](How%20to%20Midjourney/grumpykitten9741_a_simple_floral_arrangement_in_spring_colors_o_23b9c0ea-6465-4c73-945a-8a597d404d5a.png)
-
-zoom out x2 ar 9:16
+|||
+|--|--|
+| ![Original, ar 1:1](How%20to%20Midjourney/grumpykitten9741_a_simple_floral_arrangement_in_spring_colors_o_7b70e8ef-69b9-4136-b1b9-97cfedb3e3a6.png) Original, ar 1:1 | ![zoom out x2 ar 9:16](How%20to%20Midjourney/grumpykitten9741_a_simple_floral_arrangement_in_spring_colors_o_23b9c0ea-6465-4c73-945a-8a597d404d5a.png) zoom out x2 ar 9:16 |
 
 ## **Custom Zoom**
 
@@ -330,13 +271,9 @@ The `**🔎 Custom Zoom`** button lets you choose how much to zoom out on an i
 
 </aside>
 
-![**a simple floral arrangement in spring colors, one main element, leaves, gouache, illustration, minimalistic, clean lines --no vase --niji 5 --style expressive --ar 9:16,** after custom zoom out and change of aspect ratio](How%20to%20Midjourney/grumpykitten9741_a_simple_floral_arrangement_in_spring_colors_o_9a252777-958c-46dd-920c-6efdefe38c67.png)
-
-**a simple floral arrangement in spring colors, one main element, leaves, gouache, illustration, minimalistic, clean lines --no vase --niji 5 --style expressive --ar 9:16,** after custom zoom out and change of aspect ratio
-
-![new prompt: **A framed picture on the wall --ar 3:2 --zoom 2**](How%20to%20Midjourney/grumpykitten9741_A_framed_picture_on_the_wall_b61a3e7c-ddf3-4a35-a0b9-813a056034b1.png)
-
-new prompt: **A framed picture on the wall --ar 3:2 --zoom 2**
+|||
+|--|--|
+| ![**a simple floral arrangement in spring colors, one main element, leaves, gouache, illustration, minimalistic, clean lines --no vase --niji 5 --style expressive --ar 9:16,** after custom zoom out and change of aspect ratio](How%20to%20Midjourney/grumpykitten9741_a_simple_floral_arrangement_in_spring_colors_o_9a252777-958c-46dd-920c-6efdefe38c67.png) **a simple floral arrangement in spring colors, one main element, leaves, gouache, illustration, minimalistic, clean lines --no vase --niji 5 --style expressive --ar 9:16,** after custom zoom out and change of aspect ratio | ![new prompt: **A framed picture on the wall --ar 3:2 --zoom 2**](How%20to%20Midjourney/grumpykitten9741_A_framed_picture_on_the_wall_b61a3e7c-ddf3-4a35-a0b9-813a056034b1.png) new prompt: **A framed picture on the wall --ar 3:2 --zoom 2** |
 
 # Pan
 
@@ -352,17 +289,9 @@ new prompt: **A framed picture on the wall --ar 3:2 --zoom 2**
 - You **cannot control** the amount you pan with each panning operation
 - You may see 'repetition' as you pan, to avoid this try changing your prompt as you go to include new details
 
-![**a serene beach in sunset --v 5.2**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_416ead0a-ed60-474b-acdf-21cff3085580.png)
-
-**a serene beach in sunset --v 5.2**
-
-![panned left](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_bc1d43df-a981-41d2-acd0-665542c941e8.png)
-
-panned left
-
-![panned left x2](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_bd06f8e5-9115-4672-a4d7-baf72ada9427.png)
-
-panned left x2
+||||
+|--|--|--|
+| ![**a serene beach in sunset --v 5.2**](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_416ead0a-ed60-474b-acdf-21cff3085580.png) **a serene beach in sunset --v 5.2** | ![panned left](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_bc1d43df-a981-41d2-acd0-665542c941e8.png) panned left | ![panned left x2](How%20to%20Midjourney/grumpykitten9741_a_serene_beach_in_sunset_bd06f8e5-9115-4672-a4d7-baf72ada9427.png) panned left x2 |
 
 # **Variation Mode**
 
